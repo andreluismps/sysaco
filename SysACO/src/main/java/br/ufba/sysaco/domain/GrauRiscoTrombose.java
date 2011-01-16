@@ -5,17 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Classe que representa o sexo de uma pessoa.
+ * Classe que representa o grau de risco de ocorrência de uma trombose.
  * @author andre
  *
  */
-public class Sexo {
+public class GrauRiscoTrombose {
 	@Id
 	@GeneratedValue
 	private Long id;
 	
 	/**
-	 * O nome pode ser Masculino ou Feminino.
+	 * O nome do grau de risco.
 	 */
 	@Column
 	private String nome;

@@ -5,17 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Classe que representa o sexo de uma pessoa.
+ * Classe que representa o sangramento que o paciente apresenta na consulta.
  * @author andre
  *
  */
-public class Sexo {
+public class Sangramento {
 	@Id
 	@GeneratedValue
 	private Long id;
 	
 	/**
-	 * O nome pode ser Masculino ou Feminino.
+	 * Descrição do sangramento.
 	 */
 	@Column
 	private String nome;

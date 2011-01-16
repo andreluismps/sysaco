@@ -5,18 +5,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Classe que representa o sexo de uma pessoa.
+ * Classe que representa a unidade de saúde onde uma consulta é realizada.
  * @author andre
  *
  */
-public class Sexo {
+public class UnidadeSaude {
 	@Id
 	@GeneratedValue
 	private Long id;
 	
 	/**
-	 * O nome pode ser Masculino ou Feminino.
+	 * Nome da unidade de saúde.
 	 */
 	@Column
 	private String nome;
+	
+	/**
+	 * Endereço da Unidade de Saúde.
+	 */
+	@Column
+	private Endereco endereco;
+
 }

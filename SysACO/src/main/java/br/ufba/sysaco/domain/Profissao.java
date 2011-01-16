@@ -4,18 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-/**
- * Classe que representa o sexo de uma pessoa.
- * @author andre
- *
- */
-public class Sexo {
+
+public class Profissao {
 	@Id
 	@GeneratedValue
 	private Long id;
 	
 	/**
-	 * O nome pode ser Masculino ou Feminino.
+	 * O nome pode ser Médico ou Farmacêutico.
 	 */
 	@Column
 	private String nome;
