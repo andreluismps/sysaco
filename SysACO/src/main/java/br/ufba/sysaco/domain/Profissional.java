@@ -1,6 +1,7 @@
 package br.ufba.sysaco.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -8,6 +9,7 @@ import javax.persistence.Id;
  * Classe que representa o profissional de saúde.
  * O mesmo pode ser um médico ou farmacêutico.
  */
+@Entity
 public class Profissional {
 	@Id
 	@GeneratedValue

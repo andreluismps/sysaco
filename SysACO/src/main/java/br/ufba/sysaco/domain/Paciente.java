@@ -1,10 +1,16 @@
 package br.ufba.sysaco.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
+/**
+ * Classe que representa os dados referentes ao paciente.
+ * @author andre
+ *
+ */
+@Entity
 public class Paciente {
 	
 	@Id

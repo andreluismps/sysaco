@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 /**
- * Classe que representa o Paciente.
+ * Classe que representa dados pessoais.
  * @author andre
  *
  */
@@ -44,7 +44,7 @@ public class Pessoa {
 	/**
 	 * Sexo da pessoa
 	 */
-	@Column(length=1)
+	@Column
 	private Sexo sexo;
 	
 	/**
