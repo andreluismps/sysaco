@@ -1,6 +1,7 @@
 package br.ufba.sysaco.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -9,6 +10,7 @@ import javax.persistence.Id;
  * @author andre
  *
  */
+@Entity
 public class InteracaoMedicamentosa {
 	@Id
 	@GeneratedValue

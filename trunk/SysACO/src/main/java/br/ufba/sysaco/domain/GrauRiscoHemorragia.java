@@ -1,6 +1,7 @@
 package br.ufba.sysaco.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -14,6 +15,7 @@ import javax.persistence.Id;
  * 
  * A mesma coisa vale para a classe GrauRiscoTrombose.
  */
+@Entity
 public class GrauRiscoHemorragia {
 	@Id
 	@GeneratedValue
