@@ -27,5 +27,45 @@ public class FatorRisco {
 	
 	@Column
 	private GrauRiscoTrombose grauRiscoTrombose;
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	public String getNome() {
+		return nome;
+	}
+
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	
+	public GrauRiscoHemorragia getGrauRiscoHemorragia() {
+		return grauRiscoHemorragia;
+	}
+
+	
+	public void setGrauRiscoHemorragia(GrauRiscoHemorragia grauRiscoHemorragia) {
+		this.grauRiscoHemorragia = grauRiscoHemorragia;
+	}
+
+	
+	public GrauRiscoTrombose getGrauRiscoTrombose() {
+		return grauRiscoTrombose;
+	}
+
+	
+	public void setGrauRiscoTrombose(GrauRiscoTrombose grauRiscoTrombose) {
+		this.grauRiscoTrombose = grauRiscoTrombose;
+	}
 	
 }

@@ -30,4 +30,44 @@ public class Profissional {
 	 */
 	@Column
 	private Long conselhoRegional;
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+
+	
+	public Profissao getProfissao() {
+		return profissao;
+	}
+
+	
+	public void setProfissao(Profissao profissao) {
+		this.profissao = profissao;
+	}
+
+	
+	public Long getConselhoRegional() {
+		return conselhoRegional;
+	}
+
+	
+	public void setConselhoRegional(Long conselhoRegional) {
+		this.conselhoRegional = conselhoRegional;
+	}
 }
