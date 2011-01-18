@@ -105,5 +105,145 @@ public class Consulta {
 	 */
 	@OneToMany
 	private Set<InteracaoMedicamentosa> InteracoesMedicamentosas;
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	
+	public Profissional getProfissional() {
+		return profissional;
+	}
+
+	
+	public void setProfissional(Profissional profissional) {
+		this.profissional = profissional;
+	}
+
+	
+	public Date getData() {
+		return data;
+	}
+
+	
+	public void setData(Date data) {
+		this.data = data;
+	}
+
+	
+	public Medicamento getAco() {
+		return aco;
+	}
+
+	
+	public void setAco(Medicamento aco) {
+		this.aco = aco;
+	}
+
+	
+	public Double getDoseAcoReceitada() {
+		return doseAcoReceitada;
+	}
+
+	
+	public void setDoseAcoReceitada(Double doseAcoReceitada) {
+		this.doseAcoReceitada = doseAcoReceitada;
+	}
+
+	
+	public Double getDoseAcoSugerida() {
+		return doseAcoSugerida;
+	}
+
+	
+	public void setDoseAcoSugerida(Double doseAcoSugerida) {
+		this.doseAcoSugerida = doseAcoSugerida;
+	}
+
+	
+	public String getObservacao() {
+		return observacao;
+	}
+
+	
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+
+	
+	public Double getRni() {
+		return rni;
+	}
+
+	
+	public void setRni(Double rni) {
+		this.rni = rni;
+	}
+
+	
+	public Sangramento getSangramento() {
+		return sangramento;
+	}
+
+	
+	public void setSangramento(Sangramento sangramento) {
+		this.sangramento = sangramento;
+	}
+
+	
+	public UnidadeSaude getUnidadeSaude() {
+		return unidadeSaude;
+	}
+
+	
+	public void setUnidadeSaude(UnidadeSaude unidadeSaude) {
+		this.unidadeSaude = unidadeSaude;
+	}
+
+	
+	public Set<IndicacaoTerapeutica> getIndicacoesTerapeuticas() {
+		return IndicacoesTerapeuticas;
+	}
+
+	
+	public void setIndicacoesTerapeuticas(Set<IndicacaoTerapeutica> indicacoesTerapeuticas) {
+		IndicacoesTerapeuticas = indicacoesTerapeuticas;
+	}
+
+	
+	public Set<FatorRisco> getFatoresRisco() {
+		return FatoresRisco;
+	}
+
+	
+	public void setFatoresRisco(Set<FatorRisco> fatoresRisco) {
+		FatoresRisco = fatoresRisco;
+	}
+
+	
+	public Set<InteracaoMedicamentosa> getInteracoesMedicamentosas() {
+		return InteracoesMedicamentosas;
+	}
+
+	
+	public void setInteracoesMedicamentosas(Set<InteracaoMedicamentosa> interacoesMedicamentosas) {
+		InteracoesMedicamentosas = interacoesMedicamentosas;
+	}
 	
 }

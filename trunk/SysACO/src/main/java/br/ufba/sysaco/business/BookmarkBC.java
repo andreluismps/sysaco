@@ -12,7 +12,7 @@ import br.ufba.sysaco.domain.Bookmark;
 public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 	
 	private static final long serialVersionUID = 1L;
-	
+	/*
 	@Startup
 	@Transactional
 	public void startup() {
@@ -29,5 +29,5 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 			insert(new Bookmark("Downloads", "http://download.frameworkdemoiselle.gov.br"));
 		}
 	}
-	
+	*/
 }

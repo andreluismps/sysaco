@@ -29,4 +29,34 @@ public class InteracaoMedicamentosa {
 	 */
 	@Column
 	private Double doseDiaria;
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	public Medicamento getMedicamento() {
+		return medicamento;
+	}
+
+	
+	public void setMedicamento(Medicamento medicamento) {
+		this.medicamento = medicamento;
+	}
+
+	
+	public Double getDoseDiaria() {
+		return doseDiaria;
+	}
+
+	
+	public void setDoseDiaria(Double doseDiaria) {
+		this.doseDiaria = doseDiaria;
+	}
 }

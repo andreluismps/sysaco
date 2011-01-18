@@ -39,5 +39,55 @@ public class IndicacaoTerapeutica {
 	 * Nome da indicação terapêutica.
 	 */
 	@Column
-	private String nome;	
+	private String nome;
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	public Double getAlvoRniMinimo() {
+		return alvoRniMinimo;
+	}
+
+	
+	public void setAlvoRniMinimo(Double alvoRniMinimo) {
+		this.alvoRniMinimo = alvoRniMinimo;
+	}
+
+	
+	public Double getAlvoRniMaximo() {
+		return alvoRniMaximo;
+	}
+
+	
+	public void setAlvoRniMaximo(Double alvoRniMaximo) {
+		this.alvoRniMaximo = alvoRniMaximo;
+	}
+
+	
+	public Long getDuracao() {
+		return duracao;
+	}
+
+	
+	public void setDuracao(Long duracao) {
+		this.duracao = duracao;
+	}
+
+	
+	public String getNome() {
+		return nome;
+	}
+
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}	
 }
