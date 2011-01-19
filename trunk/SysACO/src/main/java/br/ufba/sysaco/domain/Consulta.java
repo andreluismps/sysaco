@@ -1,6 +1,6 @@
 package br.ufba.sysaco.domain;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -25,63 +25,63 @@ public class Consulta {
 	/**
 	 * Paciente que vai à consulta.
 	 */
-	@Column
+
 	private Paciente paciente;
 	
 	/**
 	 * Médico ou farmacêutico que realiza a consulta do paciente.
 	 */
-	@Column
+	
 	private Profissional profissional;
 	
 	/**
 	 * Data da consulta.
 	 */
-	@Column
+	
 	private Date data;
 	
 	/**
 	 * Medicamento utilizado como anticoagulante oral.
 	 */
-	@Column
+	
 	private Medicamento aco;
 	
 	/**
 	 * Dose receitada pelo profissional de saúde
 	 */
-	@Column
+	
 	private Double doseAcoReceitada;
 	
 	/**
 	 * Dose sugerida pelo sistema especialista.
 	 * É armazenada para que depois seja analisada num comparativo.
 	 */
-	@Column
+	
 	private Double doseAcoSugerida;
 	
 	/**
 	 * Observação feita na consulta, mas que não cabe no domínio dos atributos desta classe.
 	 */
-	@Column
+	
 	private String observacao;
 	
 	/**
 	 * Valor da Razão Normalizada Internacional.
 	 * Este valor é trazido pelo paciente através de um exame.
 	 */
-	@Column
+	
 	private Double rni;
 	
 	/**
 	 * Sangramento apresentado pelo paciente na consulta.
 	 */
-	@Column
+	
 	private Sangramento sangramento;
 	
 	/**
 	 * Local onde é realizada a consulta.
 	 */
-	@Column
+	
 	private UnidadeSaude unidadeSaude;
 	
 	/**
