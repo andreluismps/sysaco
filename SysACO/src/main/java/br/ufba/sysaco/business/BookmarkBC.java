@@ -1,12 +1,9 @@
 package br.ufba.sysaco.business;
 
-import br.ufba.sysaco.domain.Bookmark;
-import br.gov.frameworkdemoiselle.annotation.Startup;
 import br.gov.frameworkdemoiselle.stereotype.BusinessController;
 import br.gov.frameworkdemoiselle.template.DelegateCrud;
-import br.gov.frameworkdemoiselle.transaction.Transactional;
-import br.ufba.sysaco.persistence.BookmarkDAO;
 import br.ufba.sysaco.domain.Bookmark;
+import br.ufba.sysaco.persistence.BookmarkDAO;
 
 @BusinessController
 public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {

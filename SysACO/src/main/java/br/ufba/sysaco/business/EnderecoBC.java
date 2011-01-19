@@ -2,12 +2,12 @@ package br.ufba.sysaco.business;
 
 import br.gov.frameworkdemoiselle.stereotype.BusinessController;
 import br.gov.frameworkdemoiselle.template.DelegateCrud;
-import br.ufba.sysaco.domain.UnidadeSaude;
-import br.ufba.sysaco.persistence.UnidadeSaudeDAO;
+import br.ufba.sysaco.domain.Endereco;
+import br.ufba.sysaco.persistence.EnderecoDAO;
 
 
 @BusinessController
-public class UnidadeSaudeBC extends DelegateCrud<UnidadeSaude, Long, UnidadeSaudeDAO> {
+public class EnderecoBC extends DelegateCrud<Endereco, Long, EnderecoDAO> {
 	
 	private static final long serialVersionUID = 1L;
 	/*
