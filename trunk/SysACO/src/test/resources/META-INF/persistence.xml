@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="sysaco-ds">
+		<jta-data-source>java:/DefaultDS</jta-data-source>
+		<class>br.ufba.sysaco.domain.Bookmark</class>
+		<class>br.ufba.sysaco.domain.Consulta</class>
+		<class>br.ufba.sysaco.domain.Endereco</class>
+		<class>br.ufba.sysaco.domain.FatorRisco</class>
+		<class>br.ufba.sysaco.domain.GrauRiscoHemorragia</class>
+		<class>br.ufba.sysaco.domain.GrauRiscoTrombose</class>
+		<class>br.ufba.sysaco.domain.IndicacaoTerapeutica</class>
+		<class>br.ufba.sysaco.domain.InteracaoMedicamentosa</class>
+		<class>br.ufba.sysaco.domain.Medicamento</class>
+		<class>br.ufba.sysaco.domain.Paciente</class>
+		<class>br.ufba.sysaco.domain.Pessoa</class>
+		<class>br.ufba.sysaco.domain.Profissao</class>
+		<class>br.ufba.sysaco.domain.Profissional</class>
+		<class>br.ufba.sysaco.domain.Sangramento</class>
+		<class>br.ufba.sysaco.domain.Sexo</class>
+		<class>br.ufba.sysaco.domain.UnidadeSaude</class>
+
+		<properties>
+
+			<!-- <property name="hibernate.show_sql" value="true" /> <property name="hibernate.format_sql" value="false" /> <property 
+				name="hibernate.hbm2ddl.auto" value="update" /> <property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" 
+				/> <property name="jta.UserTransaction" value="UserTransaction" /> </properties> -->
+
+			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9001/sysaco" />
+
+			<property name="eclipselink.logging.level" value="FINE" />
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			</properties>
+	</persistence-unit>
+
+</persistence>
