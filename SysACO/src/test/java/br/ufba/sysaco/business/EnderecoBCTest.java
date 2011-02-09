@@ -50,11 +50,11 @@ public class EnderecoBCTest {
 
 	private Endereco getMinimalValidEndereco() {
 		Endereco endereco = new Endereco();
-		endereco.setBairro("Bonfim");
-		endereco.setCep("40415140");
-		endereco.setComplemento("Rua sem saida.");
-		endereco.setLogradouro("Rua Otavio");
-		endereco.setNumero("11A");
+		endereco.setBairro("Bairro");
+		endereco.setCep("40000000");
+		endereco.setComplemento("Era uma casa, Muito engraçada, Não tinha teto, Não tinha nada...");
+		endereco.setLogradouro("Rua dos Bobos");
+		endereco.setNumero("0");
 		endereco.setTelefone("7133558899");
 		return endereco;
 	}

@@ -48,8 +48,11 @@ import br.ufba.sysaco.business.UnidadeSaudeBC;
 @ApplicationScoped
 public class ApplicationLoader {
 
-	@Inject
-	private UnidadeSaudeBC unidadeSaudeBC;
+	/*
+	 * @Inject
+	 * private UnidadeSaudeBC unidadeSaudeBC;
+	 */
+	
 	
 	@Inject
 	private EnderecoBC enderecoBC;
