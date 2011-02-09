@@ -4,10 +4,10 @@
 
 	<persistence-unit name="sysaco-ds">
 		<jta-data-source>java:/DefaultDS</jta-data-source>
-		<class>br.ufba.sysaco.domain.Bookmark</class>
-		<class>br.ufba.sysaco.domain.Consulta</class>
+	<!--  <class>br.ufba.sysaco.domain.Bookmark</class>
+		<class>br.ufba.sysaco.domain.Consulta</class> -->	
 		<class>br.ufba.sysaco.domain.Endereco</class>
-		<class>br.ufba.sysaco.domain.FatorRisco</class>
+	<!-- 	<class>br.ufba.sysaco.domain.FatorRisco</class>
 		<class>br.ufba.sysaco.domain.GrauRiscoHemorragia</class>
 		<class>br.ufba.sysaco.domain.GrauRiscoTrombose</class>
 		<class>br.ufba.sysaco.domain.IndicacaoTerapeutica</class>
@@ -20,6 +20,7 @@
 		<class>br.ufba.sysaco.domain.Sangramento</class>
 		<class>br.ufba.sysaco.domain.Sexo</class>
 		<class>br.ufba.sysaco.domain.UnidadeSaude</class>
+		-->
 
 		<properties>
 
