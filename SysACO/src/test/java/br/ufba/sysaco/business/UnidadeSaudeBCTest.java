@@ -4,9 +4,12 @@
 package br.ufba.sysaco.business;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+
+import java.util.List;
 
 import javax.inject.Inject;
+
+import junit.framework.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,47 +34,64 @@ public class UnidadeSaudeBCTest {
 	private ApplicationLoader appLoader;
 	
 	@Inject
+	private EnderecoBCTest endTest;
+	
+	@Inject
 	UnidadeSaudeBC bc;
-	/*
+	
 	@Before
 	public void before() {
 		for (UnidadeSaude uns : bc.findAll()) {
 			bc.delete(uns.getId());
 		}
 	}
-*/
+
 	/**
 	 * Test method for {@link br.gov.frameworkdemoiselle.template.DelegateCrud#delete(java.lang.Object)}.
 	 */
-	/*
+
 	@Test
 	public void testDelete() {
-		fail("Not yet implemented");
+		UnidadeSaude us = getMinimalValidUnidadeSaude();
+		bc.insert(us);
+		assertNotNull(us.getId());
 	}
-*/
+
 	/**
 	 * Test method for {@link br.gov.frameworkdemoiselle.template.DelegateCrud#findAll()}.
 	 */
-	/*
+
 	@Test
 	public void testFindAll() {
-		fail("Not yet implemented");
+		UnidadeSaude uns = getMinimalValidUnidadeSaude();
+		bc.insert(uns);
+		uns.setNome("uns");
+		bc.update(uns);
+		UnidadeSaude uns2 = getMinimalValidUnidadeSaude();
+		bc.insert(uns2);
+		uns2.setNome("uns2");
+		bc.update(uns2);
+		UnidadeSaude uns3 = getMinimalValidUnidadeSaude();
+		bc.insert(uns);
+		uns3.setNome("uns3");
+		bc.update(uns3);
+		
+		List<UnidadeSaude> lista = bc.findAll();
+		
+		Assert.assertEquals("uns", lista.get(0).getNome());
+		Assert.assertEquals("uns2", lista.get(1).getNome());
+		Assert.assertEquals("uns3", lista.get(2).getNome());
+		
+		
 	}
-*/
+
 	/**
 	 * Test method for {@link br.gov.frameworkdemoiselle.template.DelegateCrud#insert(java.lang.Object)}.
 	 */
 	
 	@Test
 	public void testInsert() {
-		Endereco end = new Endereco();
-		end.setBairro("");
-		end.setCep("4044444");
-		end.setComplemento("");
-		end.setLogradouro("");
-		end.setNumero("11A");
-		end.setTelefone("3213122");
-		UnidadeSaude uns = new UnidadeSaude("Hospital Universitário", end);
+		UnidadeSaude uns = getMinimalValidUnidadeSaude();
 		bc.insert(uns);
 		assertNotNull(uns.getId());
 	}
@@ -79,21 +99,32 @@ public class UnidadeSaudeBCTest {
 	/**
 	 * Test method for {@link br.gov.frameworkdemoiselle.template.DelegateCrud#load(java.lang.Object)}.
 	 */
-	/*
+	
 	@Test
 	public void testLoad() {
-		fail("Not yet implemented");
+		UnidadeSaude us = getMinimalValidUnidadeSaude();
+		bc.insert(us);
+		assertNotNull( bc.load(us.getId()));
 	}
-*/
+
 	/**
 	 * Test method for {@link br.gov.frameworkdemoiselle.template.DelegateCrud#update(java.lang.Object)}.
 	 */
-	/*
+	
 	@Test
 	
 	public void testUpdate() {
-		fail("Not yet implemented");
+		UnidadeSaude uns = getMinimalValidUnidadeSaude();
+		bc.insert(uns);
+		uns.setNome("uns");
+		bc.update(uns);		
+		Assert.assertEquals("uns", bc.load(uns.getId()).getNome());
 	}
-	*/
+	
+	
+	private UnidadeSaude getMinimalValidUnidadeSaude() {
+		Endereco end = endTest.getMinimalValidEndereco();
+		return new UnidadeSaude("Hospital Universitário", end);
+	}
 
 }

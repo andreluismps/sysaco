@@ -1,5 +1,7 @@
 package br.ufba.sysaco.domain;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,13 +22,13 @@ public class IndicacaoTerapeutica {
 	 * Valor mínimo do intervalo de RNI para a indicação terapêutica.
 	 */
 
-	private Double alvoRniMinimo;
+	private BigDecimal alvoRniMinimo;
 
 	/**
 	 * Valor máximo do intervalo de RNI para a indicação terapêutica.
 	 */
 
-	private Double alvoRniMaximo;
+	private BigDecimal alvoRniMaximo;
 
 	/**
 	 * Duração em dias do tratamento. Quando é por tempo indeterminado, permanece com null.
@@ -48,19 +50,19 @@ public class IndicacaoTerapeutica {
 		this.id = id;
 	}
 
-	public Double getAlvoRniMinimo() {
+	public BigDecimal getAlvoRniMinimo() {
 		return alvoRniMinimo;
 	}
 
-	public void setAlvoRniMinimo(Double alvoRniMinimo) {
+	public void setAlvoRniMinimo(BigDecimal alvoRniMinimo) {
 		this.alvoRniMinimo = alvoRniMinimo;
 	}
 
-	public Double getAlvoRniMaximo() {
+	public BigDecimal getAlvoRniMaximo() {
 		return alvoRniMaximo;
 	}
 
-	public void setAlvoRniMaximo(Double alvoRniMaximo) {
+	public void setAlvoRniMaximo(BigDecimal alvoRniMaximo) {
 		this.alvoRniMaximo = alvoRniMaximo;
 	}
 

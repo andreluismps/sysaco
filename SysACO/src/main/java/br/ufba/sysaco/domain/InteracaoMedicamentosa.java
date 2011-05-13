@@ -1,5 +1,8 @@
 package br.ufba.sysaco.domain;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,7 +29,18 @@ public class InteracaoMedicamentosa {
 	 * Dose diária do medicamento, em miligramas. Poderiam ser 2 atributos? Como dose e número horas entre as doses.
 	 */
 
-	private Double doseDiaria;
+	private BigDecimal doseDiaria;
+	
+	/**
+	 * Data de início da interação medicamentosa.
+	 */
+	private Date dataInicio;
+
+	/**
+	 * Data de término da interação medicamentosa.
+	 */
+	private Date dataTermino;
+	
 
 	public Long getId() {
 		return id;
@@ -44,11 +58,27 @@ public class InteracaoMedicamentosa {
 		this.medicamento = medicamento;
 	}
 
-	public Double getDoseDiaria() {
+	public BigDecimal getDoseDiaria() {
 		return doseDiaria;
 	}
 
-	public void setDoseDiaria(Double doseDiaria) {
+	public void setDoseDiaria(BigDecimal doseDiaria) {
 		this.doseDiaria = doseDiaria;
+	}
+
+	public void setDataInicio(Date dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+	public Date getDataInicio() {
+		return dataInicio;
+	}
+
+	public void setDataTermino(Date dataTermino) {
+		this.dataTermino = dataTermino;
+	}
+
+	public Date getDataTermino() {
+		return dataTermino;
 	}
 }

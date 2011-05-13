@@ -11,13 +11,14 @@ import org.drools.command.assertion.AssertEquals;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.internal.runners.statements.Fail;
 import org.junit.runner.RunWith;
 
 import br.gov.frameworkdemoiselle.transaction.Transactional;
 import br.gov.frameworkdemoiselle.util.DemoiselleRunner;
 import br.ufba.sysaco.domain.Endereco;
 import br.ufba.sysaco.init.ApplicationLoader;
-
+import static org.junit.Assert.fail;
 
 /**
  * @author andre
@@ -70,7 +71,8 @@ public class EnderecoBCTest {
 		Endereco endereco = getMinimalValidEndereco();
 		bc.insert(endereco);
 		endereco = bc.load(endereco.getId());	
-		bc.delete(endereco.getId());		
+		bc.delete(endereco.getId());
+		endereco = bc.load(endereco.getId());
 		Assert.assertNull(endereco);
 	}
 	
@@ -78,8 +80,13 @@ public class EnderecoBCTest {
 	public void testInsertLogradouroNull() {
 		Endereco endereco = getMinimalValidEndereco();
 		endereco.setLogradouro(null);
+		try {
 		bc.insert(endereco);
-		Assert.assertNull(endereco.getId());
+		}catch (javax.validation.ConstraintViolationException e) {
+			return;
+		}
+		
+		fail("Aceitou inserção sem Logradouro");
 	}
 	
 	/*
@@ -91,7 +98,7 @@ public class EnderecoBCTest {
 	 * @return Objeto mínimo possível
 	 */
 
-	private Endereco getMinimalValidEndereco() {
+	public Endereco getMinimalValidEndereco() {
 		Endereco endereco = new Endereco();
 		endereco.setBairro("Bairro");
 		endereco.setCep("40000000");

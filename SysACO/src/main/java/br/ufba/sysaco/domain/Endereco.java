@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * Classe que representa os dados de endereço.
  * @author andre
@@ -16,7 +19,7 @@ public class Endereco {
 	@GeneratedValue
 	private Long id;
 	
-	
+	@NotEmpty
 	private String logradouro;
 	
 	
