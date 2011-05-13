@@ -19,8 +19,9 @@
 		<class>br.ufba.sysaco.domain.Profissional</class>
 		<class>br.ufba.sysaco.domain.Sangramento</class>
 		<class>br.ufba.sysaco.domain.Sexo</class>
-		<class>br.ufba.sysaco.domain.UnidadeSaude</class>
 		-->
+		<class>br.ufba.sysaco.domain.UnidadeSaude</class>
+		
 
 		<properties>
 

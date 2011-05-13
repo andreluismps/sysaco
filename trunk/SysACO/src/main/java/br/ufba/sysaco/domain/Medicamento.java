@@ -26,13 +26,13 @@ public class Medicamento {
 	 * Grau de risco de ocorrência de hemorragia que o uso do medicamento pode resultar.
 	 */
 
-	private GrauRiscoHemorragia grauRiscoHemorragia;
+	private Risco grauRiscoHemorragia;
 
 	/**
 	 * Grau de risco de ocorrência de trombose que o uso do medicamento pode resultar.
 	 */
 
-	private GrauRiscoTrombose grauRiscoTrombose;
+	private Risco grauRiscoTrombose;
 
 	public Long getId() {
 		return id;
@@ -50,19 +50,22 @@ public class Medicamento {
 		this.nome = nome;
 	}
 
-	public GrauRiscoHemorragia getGrauRiscoHemorragia() {
+	public Risco getRisco() {
 		return grauRiscoHemorragia;
 	}
 
-	public void setGrauRiscoHemorragia(GrauRiscoHemorragia grauRiscoHemorragia) {
+	
+	public void setRisco(Risco grauRiscoHemorragia) {
 		this.grauRiscoHemorragia = grauRiscoHemorragia;
 	}
 
-	public GrauRiscoTrombose getGrauRiscoTrombose() {
+	
+	public Risco getRiscoTrombose() {
 		return grauRiscoTrombose;
 	}
 
-	public void setGrauRiscoTrombose(GrauRiscoTrombose grauRiscoTrombose) {
+	
+	public void setGrauRisco(Risco grauRiscoTrombose) {
 		this.grauRiscoTrombose = grauRiscoTrombose;
 	}
 

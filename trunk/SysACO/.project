@@ -31,12 +31,12 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.maven.ide.eclipse.maven2Builder</name>
+			<name>br.gov.demoiselle.eclipse.demoiselleBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>br.gov.demoiselle.eclipse.demoiselleBuilder</name>
+			<name>org.maven.ide.eclipse.maven2Builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -50,6 +50,5 @@
 		<nature>org.jboss.tools.jsf.jsfnature</nature>
 		<nature>org.jboss.tools.jst.web.kb.kbnature</nature>
 		<nature>org.jboss.tools.cdi.core.cdinature</nature>
-		<nature>br.gov.demoiselle.eclipse.main.demoiselleNature</nature>
 	</natures>
 </projectDescription>

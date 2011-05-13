@@ -1,11 +1,13 @@
 package br.ufba.sysaco.domain;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Classe que representa os fatores de risco associados ao paciente numa dada consulta.
+ * Classe que representa os fatores de risco associados ao paciente.
  * @author andre
  *
  */
@@ -22,11 +24,21 @@ public class FatorRisco {
 	private String nome;
 	
 
-	private GrauRiscoHemorragia grauRiscoHemorragia;
+	private Risco grauRiscoHemorragia;
 	
 
-	private GrauRiscoTrombose grauRiscoTrombose;
+	private Risco grauRiscoTrombose;
 
+	
+	/**
+	 * Data de início do fator de risco.
+	 */
+	private Date dataInicio;
+
+	/**
+	 * Data de término do fator de risco.
+	 */
+	private Date dataTermino;
 	
 	public Long getId() {
 		return id;
@@ -48,23 +60,43 @@ public class FatorRisco {
 	}
 
 	
-	public GrauRiscoHemorragia getGrauRiscoHemorragia() {
+	public Risco getRisco() {
 		return grauRiscoHemorragia;
 	}
 
 	
-	public void setGrauRiscoHemorragia(GrauRiscoHemorragia grauRiscoHemorragia) {
+	public void setRisco(Risco grauRiscoHemorragia) {
 		this.grauRiscoHemorragia = grauRiscoHemorragia;
 	}
 
 	
-	public GrauRiscoTrombose getGrauRiscoTrombose() {
+	public Risco getRiscoTrombose() {
 		return grauRiscoTrombose;
 	}
 
 	
-	public void setGrauRiscoTrombose(GrauRiscoTrombose grauRiscoTrombose) {
+	public void setGrauRisco(Risco grauRiscoTrombose) {
 		this.grauRiscoTrombose = grauRiscoTrombose;
+	}
+
+
+	public void setDataInicio(Date dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+
+	public Date getDataInicio() {
+		return dataInicio;
+	}
+
+
+	public void setDataTermino(Date dataTermino) {
+		this.dataTermino = dataTermino;
+	}
+
+
+	public Date getDataTermino() {
+		return dataTermino;
 	}
 	
 }

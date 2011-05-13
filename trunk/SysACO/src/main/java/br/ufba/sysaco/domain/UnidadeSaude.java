@@ -1,8 +1,11 @@
 package br.ufba.sysaco.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.PersistenceContext;
 
 /**
  * Classe que representa a unidade de saúde onde uma consulta é realizada.
@@ -25,7 +28,8 @@ public class UnidadeSaude {
 	/**
 	 * Endereço da Unidade de Saúde.
 	 */
-
+	@OneToOne
+	(cascade = {CascadeType.PERSIST})
 	private Endereco endereco;
 	
 	public UnidadeSaude() {
