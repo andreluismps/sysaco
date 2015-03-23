@@ -1,0 +1,2 @@
+Este sistema baseado em regras serve para auxiliar na profilaxia de eventos trombóticos com uso de Anticoagulantes Orais (ACO) e, assim, minimizar a ocorrência de acontecimentos indesejados, como o
+desenvolvimento de trombos e/ou êmbolos e o surgimento de hemorragias nos pacientes sob tratamento de tal medicação.
